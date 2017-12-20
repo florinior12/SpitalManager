@@ -77,31 +77,15 @@ public class PacientiController extends HttpServlet {
             Pacienti pacientToDelete = new Pacienti();
             pacientToDelete.setIdPacient(Integer.parseInt(request.getParameter("id")));
             pacientDaoImpl.stergePacient(pacientToDelete);
+        } else if (request.getParameter("action").equals("update")) {
+            pacientDaoImpl.modificaPacienti(Integer.parseInt(request.getParameter("idToUpdate")),
+                        request.getParameter("numeToAdd"),
+                        request.getParameter("prenumeToAdd"),
+                        request.getParameter("telefonToAdd"),
+                        request.getParameter("adresaToAdd"),
+                        request.getParameter("varstaToAdd"));
         }
-            
-        /*if (request.getParameter("modificaPacient") != null) {
-            int id1 = Integer.parseInt(request.getParameter("idPacient"));
-            String nume = request.getParameter("nume");
-            String prenume = request.getParameter("prenume");
-            String telefon = request.getParameter("telefon");
-            String adresa = request.getParameter("adresa");
-            int varsta = 0;
-            if (!request.getParameter("varsta").equals(""))
-                varsta = Integer.parseInt(request.getParameter("varsta"));
-            pacientDaoImpl.modificaPacienti(id1, nume, prenume, adresa, telefon, varsta );
-            
-        }
-        if (request.getParameter("stergePacient")!=null) {
-            int id2 = Integer.parseInt(request.getParameter("idPacient"));
-            pacient.setIdPacient(id2);
-            pacientDaoImpl.stergePacient(pacient);
-            
-        }
-        List<Pacienti> listaPacienti = new ArrayList();
-        listaPacienti = pacientDaoImpl.afiseazaPacienti();
-        request.setAttribute("listaPacienti", listaPacienti);
-        RequestDispatcher rd = request.getRequestDispatcher("afiseaza_pacienti.jsp");
-        rd.forward(request,response);*/
+        
     }
     
 

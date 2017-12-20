@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 19, 2017 9:28:05 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.Consultatii" table="consultatii" catalog="spital" optimistic-lock="version">
+        <id name="idConsultatie" type="int">
+            <column name="idConsultatie" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="medici" class="pojo.Medici" fetch="select">
+            <column name="fk_idMedic" not-null="true" />
+        </many-to-one>
+        <many-to-one name="pacienti" class="pojo.Pacienti" fetch="select">
+            <column name="fk_idPacient" not-null="true" />
+        </many-to-one>
+        <property name="data" type="date">
+            <column name="Data" length="10" not-null="true" />
+        </property>
+        <property name="diagnostic" type="string">
+            <column name="Diagnostic" length="45" />
+        </property>
+        <property name="tratament" type="string">
+            <column name="Tratament" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>PacientiController</servlet-name>
+        <servlet-class>controller.PacientiController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MediciController</servlet-name>
+        <servlet-class>controller.MediciController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultatieController</servlet-name>
+        <servlet-class>controller.ConsultatieController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PacientiController</servlet-name>
+        <url-pattern>/PacientiController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MediciController</servlet-name>
+        <url-pattern>/MediciController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultatieController</servlet-name>
+        <url-pattern>/ConsultatieController</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>pacienti.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
