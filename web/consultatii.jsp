@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="theme.css" type="text/css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src ="http://code.jquery.com/jquery-latest.min.js" ></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src ="jquery-latest.min.js" ></script>
+    <script src="jquery-ui.js"></script>
     
     <script>
         $( function() {

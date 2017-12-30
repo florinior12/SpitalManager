@@ -5,7 +5,7 @@
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="theme.css" type="text/css">
-    <script src ="http://code.jquery.com/jquery-latest.min.js" ></script>
+    <script src ="jquery-latest.min.js" ></script>
     
     <script>
         function getData(){
